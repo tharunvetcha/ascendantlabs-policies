@@ -15,6 +15,10 @@ Where your data lives
 
 All chats, messages, and attachments (photos, videos, voice notes, documents) are stored in a local SQLite database and local file storage on your device only. If you uninstall the app, back up your data first using the in-app "Backup & restore" feature (Settings) — the exported file is yours to store or share however you choose; the app itself never uploads it anywhere.
 
+Deleting your data
+
+There's no account and no copy of your data anywhere but your own device, so there's nothing to "request" deletion of from us — deleting is entirely in your hands, and immediate. Delete a single chat or message and it goes to an in-app Trash for 30 days (or you can skip that and delete it forever right away); or use Settings -> Data -> "Delete all chats & messages" or "Reset app to factory defaults" to erase everything at once. Uninstalling the app removes everything it ever stored, the same way removing any other app does.
+
 Permissions the app may request
 
 • Notifications — to show reminders you set on your own messages.
