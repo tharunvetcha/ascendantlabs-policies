@@ -1,0 +1,42 @@
+Self Chat — Privacy Policy
+Last updated: October 15, 2026
+
+Short version: Self Chat does not collect, store, transmit, or share any of your data with anyone — including the developer. Everything you write stays on your device, in a local database, forever.
+
+What Self Chat is
+
+Self Chat is a personal journaling app styled like a messaging app, where every "chat" is a thread you write to yourself. It is designed to work 100% offline.
+
+Data collection
+
+Self Chat does not have a backend server, does not make network requests, does not use analytics or crash-reporting SDKs, and does not show ads. There is no account to create and no sign-in. Nothing you type, attach, or do inside the app is ever sent anywhere.
+
+Where your data lives
+
+All chats, messages, and attachments (photos, videos, voice notes, documents) are stored in a local SQLite database and local file storage on your device only. If you uninstall the app, back up your data first using the in-app "Backup & restore" feature (Settings) — the exported file is yours to store or share however you choose; the app itself never uploads it anywhere.
+
+Permissions the app may request
+
+• Notifications — to show reminders you set on your own messages.
+• Camera — only when you choose to take a photo or video from inside the app.
+• Photos / videos / files — only when you choose to attach existing media to a message.
+• Microphone — when you choose to record a voice note, and whenever you open the in-app camera (it requests microphone access up front in case you decide to record a video).
+• Alarms & reminders (Android 12+) — to schedule reminder notifications at the exact time you pick.
+
+Each of these is used solely to provide the corresponding in-app feature and never leaves your device.
+
+Third parties
+
+Self Chat does not integrate any third-party analytics, advertising, or tracking SDKs, and does not share data with any third party, because it does not collect any data to share in the first place.
+
+Children's privacy
+
+Self Chat does not knowingly collect any information from anyone, including children, since it collects no information at all.
+
+Changes to this policy
+
+If this policy ever changes, the updated version will be published at this same URL with a new "Last updated" date.
+
+Contact
+
+Questions about this policy can be sent to hello.ascendantlabs@gmail.com.
