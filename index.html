@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f0e8">
+<meta name="description" content="Self Chat is a private place to say the 3am thoughts, hard days, and quiet wins out loud — to yourself. 100% offline, no account, no ads.">
+<title>Self Chat — Some things you just need to say out loud</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Self Chat — Some things you just need to say out loud">
+<meta property="og:description" content="Not to anyone. Just somewhere. 100% offline, no account, no ads — everything you write stays on your device.">
+<meta property="og:image" content="https://tharunvetcha.github.io/ascendantlabs-policies/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--paper:#f4f0e8;--paper2:#ebe5da;--ink:#252720;--muted:#6e7068;--line:#d8d1c4;--green:#536b58;--green2:#e1e8de;--white:#fffdf8;--shadow:0 22px 60px #342f2418}
+@media (prefers-color-scheme: dark) {
+  :root{--paper:#1b1d19;--paper2:#232620;--ink:#efece3;--muted:#a3a699;--line:#3a3d35;--green:#8fb59b;--green2:#2a332c;--white:#20231e;--shadow:0 22px 60px #00000040}
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #d8d1c480}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:750;letter-spacing:-.04em}.mark{width:38px;height:38px;border:1.5px solid var(--ink);border-radius:13px;display:grid;place-items:center;font-size:19px;font-weight:600}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;font-weight:650;margin-top:1px}.navlinks{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--muted)}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--ink)}.pill{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;background:var(--ink);color:var(--white)!important;text-decoration:none;font-size:13px;font-weight:650;transition:transform .2s,background .2s}.pill:hover{transform:translateY(-2px);background:var(--green)}.hero{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:65px;padding:76px 0 88px;min-height:620px}.eyebrow{display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green)}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(48px,6vw,76px);letter-spacing:-.055em;line-height:.99;margin:22px 0 22px;max-width:570px}h1 em{color:var(--green);font-style:italic;font-weight:400}.hero p{font-size:17px;line-height:1.75;color:var(--muted);max-width:460px;margin:0 0 29px}.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.secondary{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:13px;font-weight:650;padding:12px 14px}.tiny-note{font-size:11px;color:var(--muted);margin-top:17px}.visual{position:relative;min-height:440px;display:grid;place-items:center}.sun{position:absolute;width:360px;height:360px;border-radius:50%;background:var(--paper2);right:3%;top:8%;}.leaf{position:absolute;right:2%;top:4%;font-family:Georgia,serif;color:#a6ae99;font-size:70px;transform:rotate(25deg)}.phone{position:relative;z-index:1;width:265px;height:480px;background:#20221f;border-radius:37px;padding:9px;box-shadow:0 32px 65px #25272030;transform:rotate(2deg)}.screen{height:100%;border-radius:29px;background:#f8f6f0;overflow:hidden;display:flex;flex-direction:column}.status{height:26px;display:flex;justify-content:space-between;padding:8px 17px 0;font-size:9px;font-weight:700;color:#25272e}.apphead{padding:12px 15px 14px;border-bottom:1px solid #e5e0d6;display:flex;align-items:center;justify-content:space-between}.appname{font-size:15px;font-weight:750;letter-spacing:-.04em;color:#252720}.appsub{font-size:9px;color:#7c8077;margin-top:1px}.avatar{width:31px;height:31px;border-radius:50%;background:#e1e8de;display:grid;place-items:center;color:#536b58;font-size:14px}.chat{padding:17px 12px;display:flex;flex-direction:column;gap:12px;flex:1}.day{text-align:center;color:#9a9a91;font-size:8px;letter-spacing:.08em;text-transform:uppercase;margin:1px 0 3px}.bubble{max-width:88%;padding:10px 11px;border-radius:13px;font-size:10px;line-height:1.5;box-shadow:0 2px 5px #24272008;color:#252720}
+/* Self Chat has no "other side" to reply from — every message is your
+   own, so every bubble is the same, right-aligned, one color. */
+.bubble{background:#e0e8dc;align-self:flex-end;border-top-right-radius:4px}
+.bubble .badge{display:inline-flex;align-items:center;gap:4px;font-size:8px;color:#536b58;font-weight:700;margin-top:4px}
+.time{font-size:7px;color:#92958c;text-align:right;margin-top:4px}.composer{margin:0 10px 12px;background:#fffefa;border:1px solid #e4dfd4;border-radius:22px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center;color:#99998f;font-size:9px}.send{width:23px;height:23px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center;font-size:12px}.float-card{position:absolute;z-index:2;background:var(--white);border:1px solid #e4ddd1;border-radius:16px;padding:13px 15px;box-shadow:var(--shadow);font-size:11px;display:flex;align-items:center;gap:10px}.float-card .fc-ico{width:28px;height:28px;border-radius:9px;background:var(--green2);color:var(--green);display:grid;place-items:center;font-size:13px;flex:none}.float-card strong{display:block;font-size:12px;margin-bottom:1px}.float-card span{color:var(--muted)}.card-one{left:0;top:23%}.card-two{right:-1%;bottom:13%}.section{padding:75px 0;border-top:1px solid #d8d1c480}.section-head{max-width:570px;margin-bottom:35px}.section h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(34px,4vw,48px);letter-spacing:-.04em;line-height:1.08;margin:14px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{border:1px solid var(--line);border-radius:19px;padding:24px 22px;background:var(--paper2);min-height:175px}.feature .ico{width:37px;height:37px;border-radius:12px;background:var(--green2);color:var(--green);display:grid;place-items:center;font-size:17px;margin-bottom:22px}.feature h3{font-size:15px;margin:0 0 7px;letter-spacing:-.02em}.feature p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}.quote{background:var(--paper2);border-radius:24px;padding:44px 36px;display:flex;justify-content:space-between;align-items:center;gap:30px}.quote blockquote{font-family:Georgia,serif;font-size:clamp(25px,3.4vw,39px);line-height:1.2;letter-spacing:-.03em;margin:0;max-width:650px}.quote small{display:block;margin-top:15px;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}.quote-mark{font-family:Georgia,serif;font-size:90px;line-height:.8;color:#9aa18f}.faq{max-width:760px}.faq details{border-bottom:1px solid var(--line);padding:18px 0}.faq summary{font-size:14px;font-weight:650;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}.faq summary:after{content:'+';font-size:19px;color:var(--green);font-weight:400}.faq details[open] summary:after{content:'−'}.faq details p{font-size:13px;color:var(--muted);line-height:1.7;max-width:650px;margin:12px 0 2px}.cta{margin:28px 0 75px;background:var(--green);color:#fffdf8;border-radius:25px;padding:43px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-family:Georgia,serif;font-size:clamp(30px,4vw,43px);line-height:1.08;font-weight:400;letter-spacing:-.04em;margin:0 0 10px}.cta p{color:#e1e7dd;font-size:13px;margin:0}.cta .pill{background:#fffdf8;color:var(--ink)!important;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:25px 0 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footer a{text-decoration:none}.footer a:hover{color:var(--ink)}.footlinks{display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.nav{height:68px}.navlinks{gap:13px}.navlinks .hide-mobile{display:none}.navlinks .pill{padding:10px 13px;font-size:11px}.hero{grid-template-columns:1fr;gap:20px;padding:54px 0 50px;min-height:unset}.hero p{font-size:15px}.visual{min-height:430px;margin-top:0}.phone{width:238px;height:432px}.sun{width:300px;height:300px;right:8%;top:11%}.card-one{left:1%;top:22%}.card-two{right:0;bottom:10%}.float-card{font-size:10px;padding:10px 12px}.section{padding:55px 0}.features{grid-template-columns:1fr}.feature{min-height:unset}.feature .ico{margin-bottom:14px}.quote{padding:30px 25px}.quote-mark{font-size:60px}.cta{padding:30px 24px;display:block;margin-bottom:50px}.cta .pill{margin-top:22px}.footer{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#top" aria-label="Self Chat home"><span class="mark">s.</span><span>self chat</span></a>
+  <nav class="navlinks" aria-label="Main navigation">
+    <a class="hide-mobile" href="#why">Why Self Chat</a>
+    <a class="hide-mobile" href="#faq">FAQ</a>
+    <a class="pill" href="https://play.google.com/store/apps/details?id=com.selfchat.app" target="_blank" rel="noreferrer">Get the app ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> 100% offline &middot; no account</div>
+    <h1>Some things you just<br>need to say <em>out loud.</em></h1>
+    <p>Not to anyone. Just somewhere. Self Chat gives your 3am thoughts, hard days, and quiet wins a place to go — private, offline, just for you.</p>
+    <div class="actions">
+      <a class="pill" href="https://play.google.com/store/apps/details?id=com.selfchat.app" target="_blank" rel="noreferrer">Download Self Chat on Google Play ↗</a>
+      <a class="secondary" href="#why">Take a closer look <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="tiny-note">Works offline &middot; No account needed &middot; No ads, ever</div>
+  </div>
+
+  <div class="visual" aria-label="Illustrative preview of Self Chat">
+    <div class="sun"></div>
+    <div class="leaf">✳</div>
+    <div class="float-card card-one"><div class="fc-ico">◷</div><div><strong>Reminder set</strong><span>Tomorrow &middot; 9:00&nbsp;AM</span></div></div>
+    <div class="phone">
+      <div class="screen">
+        <div class="status"><span>9:41</span><span>● ● ▰</span></div>
+        <div class="apphead">
+          <div><div class="appname">Late Night Thoughts</div><div class="appsub">Just you, writing</div></div>
+          <div class="avatar">✳</div>
+        </div>
+        <div class="chat">
+          <div class="day">Today</div>
+          <div class="bubble">Can't sleep. Brain won't stop replaying today.<div class="time">11:47 PM</div></div>
+          <div class="bubble">Rough one. But I showed up anyway.<div class="time">11:52 PM</div></div>
+          <div class="bubble">Small win: finally sent that email I'd been avoiding.<div class="badge">◷ Reminder &middot; tomorrow, 9 AM</div><div class="time">11:58 PM</div></div>
+        </div>
+        <div class="composer"><span>Write a thought&hellip;</span><span class="send">↑</span></div>
+      </div>
+    </div>
+    <div class="float-card card-two"><div class="fc-ico">⚿</div><div><strong>Chat locked</strong><span>PIN protected</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="why"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> About the app</div>
+    <h2>Not every thought needs a whole diary.</h2>
+    <p>Self Chat gives every hard day, late-night thought, and quiet win a familiar place to land — written the way you'd text a friend, except the friend is future you.</p>
+  </div>
+  <div class="features">
+    <article class="feature">
+      <div class="ico">✎</div>
+      <h3>Write it like a message</h3>
+      <p>Text, photos, voice notes, and documents. Reply to quote yourself, format with bold and italic, pin the lines worth keeping.</p>
+    </article>
+    <article class="feature">
+      <div class="ico">⌕</div>
+      <h3>Never lose a thought</h3>
+      <p>Search every thread at once, filtered by starred, photos, or date. Set a reminder on any message, so it finds you later.</p>
+    </article>
+    <article class="feature">
+      <div class="ico">⚿</div>
+      <h3>100% yours</h3>
+      <p>No account, no ads, no network requests. Lock any chat with a PIN, back it up to a file you control, and delete anything, any time.</p>
+    </article>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="quote">
+    <div>
+      <blockquote>"A place to put your thoughts down, so you don't have to carry every one of them around."</blockquote>
+      <small>Self Chat</small>
+    </div>
+    <div class="quote-mark">&ldquo;</div>
+  </div>
+</div></section>
+
+<section class="section" id="faq"><div class="wrap">
+  <div class="section-head">
+    <div class="eyebrow"><span class="dot"></span> A few helpful answers</div>
+    <h2>Before you begin.</h2>
+    <p>A little clarity about what Self Chat is designed to be.</p>
+  </div>
+  <div class="faq">
+    <details open>
+      <summary>What is Self Chat?</summary>
+      <p>Self Chat is a private space to message yourself — text, photos, voice notes, and documents, organized into as many threads as you want, styled like the messaging app you already use.</p>
+    </details>
+    <details>
+      <summary>Is it a messaging app?</summary>
+      <p>No. Self Chat is a personal space where you write messages to yourself. It is not a messaging service for chatting with other people — there's no one else on it.</p>
+    </details>
+    <details>
+      <summary>Does it need an internet connection?</summary>
+      <p>No. Self Chat never makes a network request. Every message, photo, and voice note you save lives only in a local database on your device.</p>
+    </details>
+    <details>
+      <summary>Where can I get it?</summary>
+      <p>Self Chat is available on Google Play. Use the button on this page to visit its listing and check the current app details.</p>
+    </details>
+    <details>
+      <summary>Where can I read the privacy policy?</summary>
+      <p>Read the Self Chat privacy policy using the link in the footer of this website.</p>
+    </details>
+  </div>
+</div></section>
+
+<section class="wrap cta">
+  <div>
+    <h2>Give your thoughts<br>a place to stay.</h2>
+    <p>Free, offline, and genuinely private — try Self Chat today.</p>
+  </div>
+  <a class="pill" href="https://play.google.com/store/apps/details?id=com.selfchat.app" target="_blank" rel="noreferrer">View on Google Play ↗</a>
+</section>
+</main>
+
+<footer class="wrap footer">
+  <div>&copy; <span id="year">2026</span> Ascendant Labs</div>
+  <div class="footlinks">
+    <a href="https://play.google.com/store/apps/details?id=com.selfchat.app" target="_blank" rel="noreferrer">Google Play</a>
+    <a href="#faq">Support &amp; FAQ</a>
+    <a href="self-chat/">Privacy policy ↗</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
