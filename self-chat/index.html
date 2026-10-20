@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Self Chat — Privacy Policy</title>
+<script>(function(){var t;try{t=localStorage.getItem("al-theme")}catch(e){}if(t)document.documentElement.dataset.theme=t})();</script>
 <style>
   :root { color-scheme: light dark; }
+  :root[data-theme="light"] { color-scheme: light; }
+  :root[data-theme="dark"] { color-scheme: dark; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     max-width: 700px;
@@ -16,9 +19,13 @@
     background: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #e8e8e8; background: #121212; }
-    a { color: #8ab4f8; }
+    :root:not([data-theme="light"]) body { color: #e8e8e8; background: #121212; }
+    :root:not([data-theme="light"]) a { color: #8ab4f8; }
   }
+  :root[data-theme="dark"] body { color: #e8e8e8; background: #121212; }
+  :root[data-theme="dark"] a { color: #8ab4f8; }
+  .site-footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid rgba(128,128,128,.25); color: #888; font-size: 0.85rem; }
+  .site-footer a { color: inherit; }
   h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
   .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
   h2 { font-size: 1.15rem; margin-top: 2rem; }
@@ -123,6 +130,8 @@
   Questions about this policy can be sent to
   <a href="mailto:hello.ascendantlabs@gmail.com">hello.ascendantlabs@gmail.com</a>.
 </p>
+
+<footer class="site-footer"><a href="https://tharunvetcha.github.io/ascendantlabs/selfchat/">Self Chat</a> · by <a href="https://tharunvetcha.github.io/ascendantlabs/">Ascendant Labs</a></footer>
 
 </body>
 </html>
