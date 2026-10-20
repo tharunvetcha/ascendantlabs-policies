@@ -6,3 +6,8 @@ Each app gets its own folder, with an `index.html` (the canonical, linked-from-t
 ## Apps
 
 - **Self Chat** — [privacy policy](https://tharunvetcha.github.io/ascendantlabs-policies/self-chat/) ([plain text](self-chat/privacy-policy.txt))
+
+## Related
+
+- Ascendant Labs: https://tharunvetcha.github.io/ascendantlabs/ ([repo](https://github.com/tharunvetcha/ascendantlabs))
+- Self Chat: https://tharunvetcha.github.io/ascendantlabs/selfchat/
